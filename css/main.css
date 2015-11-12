@@ -64,7 +64,7 @@ input {
 .diner {
     border: 2px solid #000;
     border-bottom-width: 0;
-    width: calc(25% - 20px);
+    width: calc(100% - 20px);
     margin: 10px;
     float: left;
     position: relative;
@@ -117,7 +117,6 @@ button {
 }
 
 header {
-    height: 60px;
     padding-top: 10px;
     margin-bottom: 10px;
     border-bottom: 2px solid #ccc;
@@ -126,4 +125,16 @@ header {
 
 #diner-button {
     float: left;
+}
+
+@media screen and (min-width: 40.063em) {
+    .diner {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (min-width: 64.063em) {
+    .diner {
+        width: calc(25% - 20px);
+    }
 }

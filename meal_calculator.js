@@ -38,7 +38,7 @@ var App = (function(){
 	function _createHTML(id, name, d) {
 		var dinerWrap = document.getElementById('diners')
 		var div = document.createElement('div');
-		div.className = 'diner large-3 columns';
+		div.className = 'diner small-12 medium-6 large-3 columns';
 		div.innerHTML = '<h2>'+id+' '+name+'</h2>';
 
 		var input = document.createElement('input');
@@ -138,10 +138,6 @@ var App = (function(){
 		_diners.push(d);
 	}
 
-	function _addDish(dishName, price) {
-		
-	}
-
 
 	return {
 		createDiner: function(name) {
@@ -174,8 +170,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var tax = document.getElementById('tax');
   var tip = document.getElementById('tip');
 
-  tax.addEventListener('keyup', App.updateSum);
-  tip.addEventListener('keyup', App.updateSum);
+  tax.addEventListener('keyup', App.updateSum, false);
+  tip.addEventListener('keyup', App.updateSum, false);
 
   diner.addEventListener('click', function(){
   	var dinerName = document.getElementById('diner_name').value;
